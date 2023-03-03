@@ -19,6 +19,8 @@ const Home: NextPage = () => {
     const ownerKeyPair = Keypair.generate()
     const publicKey = ownerKeyPair.publicKey
     const secretKey = ownerKeyPair.secretKey
+    console.log(publicKey)
+    console.log(secretKey)
   }
 
   const addressSubmittedHandler = (address: string) => {
