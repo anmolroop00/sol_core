@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const [balance, setBalance] = useState(0)
   const [address, setAddress] = useState('')
   const [isExecutable, setIsExecutable] = useState(false)
-
+ 
 
   function keyPair(){
     console.log("Checking the Key pair function")

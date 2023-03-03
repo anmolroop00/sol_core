@@ -10,7 +10,7 @@ function AddressForm(props: { handler: (address: string) => void }) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     props.handler(values.address)
-  };
+  }; 
 
   const handleAddressInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     event.persist();
