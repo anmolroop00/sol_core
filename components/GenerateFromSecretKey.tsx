@@ -15,7 +15,7 @@ export default function GenerateFromSecretKey(props: { handler: (secret: string)
         event.persist();
         setValues((values) => ({
           ...values,
-          address: event.target.value,
+          secret: event.target.value,
         }));
     };
     return(
@@ -26,8 +26,8 @@ export default function GenerateFromSecretKey(props: { handler: (secret: string)
                         id="SecretKey"
                         className={styles.formField}
                         type='text'
-                        placeholder="Public Address, e.g. 7C4jsPZpht42Tw6MjXWF56Q5RQUocjBBmciEjDa8HRtp"
-                        name="firstName"
+                        placeholder="Secret Key, eg:[1,2,3,44,53, .......................,35,]"
+                        name="[]"
                         value={values.secret}
                         onChange={handleSecretInputChange}
                     />
