@@ -43,16 +43,16 @@ const Home: NextPage = () => {
     }
   }
   const SecretSubmittedHandler=(secret:string) =>{
-    console.log(secret)
+    //console.log(secret)
     const inputString = secret;
     const inputArray = inputString.substring(1, inputString.length-1).split(", ").map(x => parseInt(x));
-    console.log(inputArray);
+    //console.log(inputArray);
     const keypair = Keypair.fromSecretKey(
       Uint8Array.from(inputArray)
     );
-    console.log(keypair.publicKey)
+    //console.log(keypair.publicKey)
     const pubKey = keypair.publicKey
-    //setSecret(pubKey)
+    setSecret(pubKey.toString())
   }
 
   return (
@@ -75,6 +75,7 @@ const Home: NextPage = () => {
             Generate Public Key from Sceret Key
           </p>
           <GenerateFromSecretKey handler={SecretSubmittedHandler}/>
+          <p>{`Public Key: ${secret}`}</p>
         </header>
       </div>
     </div>
